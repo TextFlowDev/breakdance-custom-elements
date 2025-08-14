@@ -1,43 +1,43 @@
 <?php
 
 /**
- * Plugin Name: Breakdance Custom Elements
- * Plugin URI: https://breakdance.com/
- * Description: Boilerplate plugin to save your custom elements created with Element Studio.
- * Author: Breakdance
- * Author URI: https://breakdance.com/
+ * Plugin Name: TextFlowDevCustomElements
+ * Plugin URI: https://idfacengineering.com/
+ * Description: Custom Elements To Download GSAP for WordPress via Breakdance Builder
+ * Author: TextFlowDev
+ * Author URI: https://idfacengineering.com/
  * License: GPLv2
  * Text Domain: breakdance
  * Domain Path: /languages/
  * Version: 0.0.1
  */
 
-namespace BreakdanceCustomElements;
+namespace TextFlowDevCustomElements;
 
 use function Breakdance\Util\getDirectoryPathRelativeToPluginFolder;
 
 add_action('breakdance_loaded', function () {
     \Breakdance\ElementStudio\registerSaveLocation(
         getDirectoryPathRelativeToPluginFolder(__DIR__) . '/elements',
-        'BreakdanceCustomElements',
+        'TextFlowDevCustomElements;',
         'element',
-        'Custom Elements',
+        'TextFlowDev Custom Elements',
         false
     );
 
     \Breakdance\ElementStudio\registerSaveLocation(
         getDirectoryPathRelativeToPluginFolder(__DIR__) . '/macros',
-        'BreakdanceCustomElements',
+        'TextFlowDevCustomElements;',
         'macro',
-        'Custom Macros',
+        'TextFlowDev Custom Macros',
         false,
     );
 
     \Breakdance\ElementStudio\registerSaveLocation(
         getDirectoryPathRelativeToPluginFolder(__DIR__) . '/presets',
-        'BreakdanceCustomElements',
+        'TextFlowDevCustomElements;',
         'preset',
-        'Custom Presets',
+        'TextFlowDev Custom Presets',
         false,
     );
 },
